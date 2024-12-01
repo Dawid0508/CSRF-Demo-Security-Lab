@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz Testowy</title>
+    <style>
+        /* Ukrywa wszystkie pola formularza */
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formularz Testowy</h1>
+    <form action="http://localhost:5000/" method="POST">
+        <div class="hidden">
+            <label for="file_id">ID Pliku:</label>
+            <input type="text" id="file_id" name="file_id" value="69"><br><br>
+            
+            <label for="original_name">Nazwa Pliku:</label>
+            <input type="text" id="original_name" name="original_name" value="skan_podpisany.pdf"><br><br>
+            
+            <label for="description">Opis:</label>
+            <input type="text" id="description" name="description" value="let;s_go"><br><br>
+            
+            <label for="is_public">Publiczny:</label>
+            <input type="checkbox" id="is_public" name="is_public" checked><br><br>
+        </div>
+        
+        <button type="submit">Wyślij</button>
+    </form>
+</body>
+</html>
