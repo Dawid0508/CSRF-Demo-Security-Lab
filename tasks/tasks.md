@@ -1,6 +1,17 @@
 # Zadania
 
-## Zadanie 1
+## Zadanie 1 - Atak CSRF - Automatyczne wysłanie formularza
+Zadanie polega na:
+1.	Przygotowaniu strony z formularzem, który automatycznie wyśle dane po załadowaniu strony lub po kliknięciu przycisku "Wyślij".
+2.	Określeniu, że formularz wysyła dane do strony `/index.php?page=edit&edit=`<id pliku>.
+3.	Upewnieniu się, że formularz zawiera odpowiednią treść, w tym description z zawartością wskazaną w zadaniu.
+4.	***Wskazówka!*** Formularz powinien zawierać następujące dane:
+-	file_id = 67
+-	original_name = skan_podpisany.pdf
+-	description = Chciałbym ogłosić, iż od dziś zostaje Matlab developerem, to moja pasja.
+-	Is_public = on (*jeśli chcemy*)
+5. Możesz skorzystać z przygotowanego przez nas [formularza](https://github.com/Dawid0508/CSRF-Demo-Security-Lab/blob/main/formularz.html), aby proces zaznajamiania się z istotą tematu szedł sprawniej.
+6.	Pamiętaj, że atak CSRF wymaga, by użytkownik był już zalogowany na stronie, a sesja użytkownika była aktywna (np. poprzez ciasteczka).
 
 ## Zadanie 2
 
@@ -12,19 +23,19 @@ Token CSRF jest najbardziej popularnym zabezpieczeniem przed atakami CSRF. Poleg
 
 ### 4.1 Generowanie unikalnego tokenu
 
-Aby zabezpieczenie działało poprawnie, należy wygenerować unikalny token przy ustanawianiu nowej sesji, na przykład podczas logowania się przez użytkownika. Warto przechowywać taki token w zmiennej $_SESSION.
+Aby zabezpieczenie działało poprawnie, należy wygenerować unikalny token przy ustanawianiu nowej sesji, na przykład podczas logowania się przez użytkownika. Warto przechowywać taki token w zmiennej `$_SESSION`.
 
-Gdzieś w tym miejscu trzeba to zrobić (*np. plik login* .php)
+Gdzieś [w tym](https://github.com/Spren3/FileStorageSite/blob/main/public_html/index.php) miejscu trzeba to zrobić.
 
-**tutaj screen z podpowiedzia**
+![Podpowiedź do 4.1](4.1_tip.png)
 
 ### 4.2 Przekazywanie tokenu CSRF klientowi
 
-Następnie należy przekazać token CSRF klientowi. W zapytaniach POST używa się do tego pola input z parametrem hidden. Dzięki temu token będzie przesyłany za każdym razem, gdy używamy konkretnego formularza. Robimy to w formularzu w pliku tutaj *nazwa tego pliku co bedzie wjazd na niego*.php. 
+Następnie należy przekazać token CSRF klientowi. W zapytaniach POST używa się do tego pola input z parametrem hidden. Dzięki temu token będzie przesyłany za każdym razem, gdy używamy konkretnego formularza. Robimy to w formularzu w pliku [tutaj.](https://github.com/Spren3/FileStorageSite/blob/main/public_html/templates/edit.html)
 
-Takie pole może wyglądać w ten sposób
+Takie pole może wyglądać w ten sposób:
 
-**tutaj screen z podpowiedzia**
+![Podpowiedz do 4.2](4.2_tip.png)
 
 
 ### 4.3 Walidacja tokenu CSRF
@@ -33,6 +44,6 @@ Ostatnim krokiem jest weryfikacja czy dla danego zapytania token jest poprawny (
 
 Można to zrobić gdzieś w tym miejscu (wystarczy prosty if sprawdzający czy token jest prawidłowy lub czy w ogóle istnieje)
 
-**tutaj screen z pokazaniem gdzie**
+![Podpowiedź 4.3](4.3_tip.png)
 
 Tak zaimplementowany token zabezpiecza użytkownika przed atakami CSRF, można sprawdzić jego działanie przeprowadzając jeden z ataków z poprzednich zadań. Należy jednak pamiętać, że taki token musi być zawarty w każdym zapytaniu generowanym do serwera (np. w każdym formularzu). Dodatkowo aby takie zabezpieczenie miało sens, aplikacja musi być zabezpieczona przed atakami XSS tak aby nie dało się wykraść wartości tokenu.
