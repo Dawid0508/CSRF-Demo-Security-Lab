@@ -10,7 +10,7 @@ Zadanie polega na:
 -	original_name = <nazwa pliku>
 -	description = Chciałbym ogłosić, iż od dziś zostaje Matlab developerem, to moja pasja.
 -	Is_public = on (*jeśli chcemy*)
-5. Możesz skorzystać z przygotowanego przez nas [formularza](https://github.com/Dawid0508/CSRF-Demo-Security-Lab/blob/main/formularz.html), aby proces zaznajamiania się z istotą tematu szedł sprawniej.
+5. Możesz skorzystać z przygotowanego przez nas [formularza](https://github.com/Dawid0508/CSRF-Demo-Security-Lab/forms/formularz.html), aby proces zaznajamiania się z istotą tematu szedł sprawniej.
 6.	Pamiętaj, że atak CSRF wymaga, by użytkownik był już zalogowany na stronie, a sesja użytkownika była aktywna (np. poprzez ciasteczka).
 
 ## Zadanie 2 - Usunięcie pliku z bazy 
@@ -20,8 +20,9 @@ Zadanie polega na:
 -    file_id = <id pliku> — ID pliku do usunięcia.
 -    delete = 1 — Parametr wskazujący, że żądanie dotyczy usunięcia pliku.
 3. Wysłanie formularza przez JavaScript: Po kliknięciu na link, formularz jest automatycznie wysyłany do serwera w celu usunięcia pliku.
-4. Możesz skorzystać z przygotowanego przez nas [formularza](https://github.com/Dawid0508/CSRF-Demo-Security-Lab/blob/main/delete.html), jeśli natrafisz na przeszkody.
-## Zadanie 3
+4. Możesz skorzystać z przygotowanego przez nas [formularza](https://github.com/Dawid0508/CSRF-Demo-Security-Lab/forms/delete.html), jeśli natrafisz na przeszkody.
+## Zadanie 3 - login CSRF
+
 
 ## Zadanie 4 – TOKEN CSRF
 
