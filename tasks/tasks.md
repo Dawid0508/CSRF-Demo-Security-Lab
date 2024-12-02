@@ -6,15 +6,21 @@ Zadanie polega na:
 2.	Określeniu, że formularz wysyła dane do strony `/index.php?page=edit&edit=`<id pliku>.
 3.	Upewnieniu się, że formularz zawiera odpowiednią treść, w tym description z zawartością wskazaną w zadaniu.
 4.	***Wskazówka!*** Formularz powinien zawierać następujące dane:
--	file_id = 67
--	original_name = skan_podpisany.pdf
+-	file_id = <id pliku>
+-	original_name = <nazwa pliku>
 -	description = Chciałbym ogłosić, iż od dziś zostaje Matlab developerem, to moja pasja.
 -	Is_public = on (*jeśli chcemy*)
 5. Możesz skorzystać z przygotowanego przez nas [formularza](https://github.com/Dawid0508/CSRF-Demo-Security-Lab/blob/main/formularz.html), aby proces zaznajamiania się z istotą tematu szedł sprawniej.
 6.	Pamiętaj, że atak CSRF wymaga, by użytkownik był już zalogowany na stronie, a sesja użytkownika była aktywna (np. poprzez ciasteczka).
 
-## Zadanie 2
-
+## Zadanie 2 - Usunięcie pliku z bazy 
+Zadanie polega na:
+1. Przygotowaniu strony z linkiem: Strona zawiera link, który po kliknięciu automatycznie wyśle formularz usuwający plik. Link prowadzi do zewnętrznej strony (np. Google), ale tak naprawdę wywołuje usunięcie pliku na serwerze.
+2. Formularz wysyłający żądanie usunięcia pliku: Formularz ukryty na stronie zawiera następujące dane:
+-    file_id = <id pliku> — ID pliku do usunięcia.
+-    delete = 1 — Parametr wskazujący, że żądanie dotyczy usunięcia pliku.
+3. Wysłanie formularza przez JavaScript: Po kliknięciu na link, formularz jest automatycznie wysyłany do serwera w celu usunięcia pliku.
+4. Możesz skorzystać z przygotowanego przez nas [formularza](https://github.com/Dawid0508/CSRF-Demo-Security-Lab/blob/main/delete.html), jeśli natrafisz na przeszkody.
 ## Zadanie 3
 
 ## Zadanie 4 – TOKEN CSRF

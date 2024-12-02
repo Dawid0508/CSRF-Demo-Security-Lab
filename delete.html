@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz Testowy</title>
+    <style>
+        .btn-danger {
+            background-color: red;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Przykład z linkiem, który usunie plik</h1>
+
+    <!-- Link, po kliknięciu na który wysyła się formularz -->
+    <a href="https://www.google.com" id="deleteLink" onclick="submitDeleteForm(event)">Przejdz do strony google.com</a>
+
+    <!-- Formularz, który zostanie wysłany po kliknięciu w link -->
+    <form id="deleteForm" action="http://localhost:1000/index.php?page=edit" method="POST" style="display:none;">
+        <!-- Ukryte dane formularza -->
+        <input type="hidden" name="file_id" value="79">
+        <input type="hidden" name="delete" value="1">
+    </form>
+
+    <script>
+        // Funkcja, która wysyła formularz po kliknięciu w link
+        function submitDeleteForm(event) {
+            // Zapobiegamy domyślnemu działaniu linku (czyli przejściu do Google)
+            event.preventDefault();
+
+            // Wysłanie formularza do serwera
+            document.getElementById('deleteForm').submit();
+        }
+    </script>
+</body>
+</html>

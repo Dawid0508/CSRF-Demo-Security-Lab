@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz z hasłem</title>
+</head>
+<body>
+    <h1>Formularz do wysłania hasła</h1>
+
+    <!-- Formularz wysyłający hasło -->
+    <form action="http://localhost:1000/index.php" method="POST">
+        <!-- Ukryte pole z hasłem -->
+        <input type="hidden" name="password" value="MbappeDurant">
+
+        <!-- Przycisk wysyłający formularz -->
+        <button type="submit">Wyślij hasło</button>
+    </form>
+</body>
+</html>
