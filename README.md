@@ -43,7 +43,7 @@ git clone https://github.com/Spren3/FileStorageSite
 ```
 Uruchom polecenie docker-compose up -d, aby zbudować obrazy i uruchomić kontener w tle:
 ```sh
-docker-compose up -d
+docker-compose up -d --build
 ```
 
 <br/> 
@@ -52,6 +52,10 @@ docker-compose up -d
 Jeśli chcesz zatrzymać kontener, użyj:
 ```sh
 docker-compose down
+```
+By ponownie uruchomić:
+```sh
+docker-compose up -d
 ```
 **Dostęp do aplikacji ogranicza statyczne hasło**
 ```sh
