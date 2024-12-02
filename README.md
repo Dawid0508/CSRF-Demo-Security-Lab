@@ -6,7 +6,7 @@ Autorzy: <br />
 
 Repozytorium stworzone w celu zapoznania się z atakami OWASP CSRF, [podatnościami](https://owasp.org/www-community/attacks/csrf) oraz ich [zapobieganiu.](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
 
-Jako część projektu dokonaliśmy zmian w naszej [aplikacji](github.com/Spren3/FileStorageSite) by pokazać jej podatności na ataki Cross-site Request Forgeries.
+Jako część projektu dokonaliśmy zmian w naszej [aplikacji](https://github.com/Spren3/FileStorageSite) by pokazać jej podatności na ataki Cross-site Request Forgeries.
 Instrukcje do zadań opisano w katalogu [tasks](https://github.com/Dawid0508/CSRF-Demo-Security-Lab/tree/main/tasks/tasks.md). Zadania dają szansę przeprowadzenia ataków CSRF i ochrony przed nimi na własną rękę! <br/>
 
 ## Przygotowanie środowiska
